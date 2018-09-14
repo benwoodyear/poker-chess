@@ -532,7 +532,7 @@ def board_to_display(piece_matrix):
                 row += chess.Piece(piece_number, colour).unicode_symbol() + ' '
             else:
 
-                row += '\u2015 '
+                row += '\u1397 '
         board.append(row)
     return board
 
@@ -670,7 +670,7 @@ def game_function():
         x, y = board_to_display(piece_matrix), nice_card_layout(new_deal)
         for i in range(8):
             print(str(8 - i) + '| ' + x[i] + '  ' + y[i])
-        print('  ----------------')
+        print('  -----------------')
         print('   a b c d e f g h')
         print('\n')
 
@@ -693,8 +693,8 @@ def game_function():
             else:
                 pass
 
-            print('White has ' + str(white_hands_won) + ' hands')
-            print('Black has ' + str(black_hands_won) + ' hands')
+            print('White has ' + str(white_hands_won))
+            print('Black has ' + str(black_hands_won))
 
     # Check which kind of victory has been achieved
     if board.is_checkmate() is False:

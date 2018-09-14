@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pygame_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pygame_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poker_chess.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/poker_chess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="638" column="86" selection-start-line="638" selection-start-column="86" selection-end-line="638" selection-end-column="86" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#153#2666#0" />
+                <element signature="e#2969#3399#0" />
+                <element signature="e#3686#3913#0" />
+                <element signature="e#4111#4459#0" />
+                <element signature="e#4702#4997#0" />
+                <element signature="e#5205#6204#0" />
+                <element signature="e#6253#7190#0" />
+                <element signature="e#7832#8087#0" />
+                <element signature="e#7455#11939#0" />
+                <element signature="e#8426#8955#0" />
+                <element signature="e#7450#7595#0" />
+                <element signature="e#9075#9396#0" />
+                <element signature="e#9450#10691#0" />
+                <element signature="e#7825#8083#0" />
+                <element signature="e#8143#8260#0" />
+                <element signature="e#10097#10206#0" />
+                <element signature="e#10272#10387#0" />
+                <element signature="e#8678#8793#0" />
+                <element signature="e#8857#9059#0" />
+                <element signature="e#9119#9321#0" />
+                <element signature="e#12291#13947#0" />
+                <element signature="e#15868#19940#0" />
+                <element signature="e#17668#18279#0" />
+                <element signature="e#19565#20177#0" />
+                <element signature="e#20916#21422#0" />
+                <element signature="e#20029#22019#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/card_deal.py" />
+        <option value="$PROJECT_DIR$/dealing_cards.py" />
+        <option value="$PROJECT_DIR$/pygame_tests.py" />
+        <option value="$PROJECT_DIR$/poker_chess.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="poker_chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poker_chess" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.card_deal">
+    <configuration name="card_deal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="poker_chess" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/poker_chess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="dealing_cards" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="poker_chess" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pygame_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.dealing_cards" />
+      <item itemvalue="Python.card_deal" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.card_deal" />
+        <item itemvalue="Python.dealing_cards" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="" />
+      <created>1528976943808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528976943808</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Pre pygame implementation">
+      <created>1536664704326</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536664704327</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16953126" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.328877" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" x="0" y="50" width="1280" height="699" id="Run" order="2" sideWeight="0.49921876" type="WINDOWED" weight="0.934492" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pre pygame implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre pygame implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="21" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pygame_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poker_chess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#153#2666#0" />
+            <element signature="e#2969#3399#0" />
+            <element signature="e#3686#3913#0" />
+            <element signature="e#4111#4459#0" />
+            <element signature="e#4702#4997#0" />
+            <element signature="e#5205#6204#0" />
+            <element signature="e#6253#7190#0" />
+            <element signature="e#7832#8087#0" />
+            <element signature="e#7455#11939#0" />
+            <element signature="e#8426#8955#0" />
+            <element signature="e#7450#7595#0" />
+            <element signature="e#9075#9396#0" />
+            <element signature="e#9450#10691#0" />
+            <element signature="e#7825#8083#0" />
+            <element signature="e#8143#8260#0" />
+            <element signature="e#10097#10206#0" />
+            <element signature="e#10272#10387#0" />
+            <element signature="e#8678#8793#0" />
+            <element signature="e#8857#9059#0" />
+            <element signature="e#9119#9321#0" />
+            <element signature="e#12291#13947#0" />
+            <element signature="e#15868#19940#0" />
+            <element signature="e#17668#18279#0" />
+            <element signature="e#19565#20177#0" />
+            <element signature="e#20916#21422#0" />
+            <element signature="e#20029#22019#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygame_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poker_chess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#153#2666#0" />
+            <element signature="e#2969#3399#0" />
+            <element signature="e#3686#3913#0" />
+            <element signature="e#4111#4459#0" />
+            <element signature="e#4702#4997#0" />
+            <element signature="e#5205#6204#0" />
+            <element signature="e#6253#7190#0" />
+            <element signature="e#7832#8087#0" />
+            <element signature="e#7455#11939#0" />
+            <element signature="e#8426#8955#0" />
+            <element signature="e#7450#7595#0" />
+            <element signature="e#9075#9396#0" />
+            <element signature="e#9450#10691#0" />
+            <element signature="e#7825#8083#0" />
+            <element signature="e#8143#8260#0" />
+            <element signature="e#10097#10206#0" />
+            <element signature="e#10272#10387#0" />
+            <element signature="e#8678#8793#0" />
+            <element signature="e#8857#9059#0" />
+            <element signature="e#9119#9321#0" />
+            <element signature="e#12291#13947#0" />
+            <element signature="e#15868#19940#0" />
+            <element signature="e#17668#18279#0" />
+            <element signature="e#19565#20177#0" />
+            <element signature="e#20916#21422#0" />
+            <element signature="e#20029#22019#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygame_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poker_chess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#153#2666#0" />
+            <element signature="e#2969#3399#0" />
+            <element signature="e#3686#3913#0" />
+            <element signature="e#4111#4459#0" />
+            <element signature="e#4702#4997#0" />
+            <element signature="e#5205#6204#0" />
+            <element signature="e#6253#7190#0" />
+            <element signature="e#7832#8087#0" />
+            <element signature="e#7455#11939#0" />
+            <element signature="e#8426#8955#0" />
+            <element signature="e#7450#7595#0" />
+            <element signature="e#9075#9396#0" />
+            <element signature="e#9450#10691#0" />
+            <element signature="e#7825#8083#0" />
+            <element signature="e#8143#8260#0" />
+            <element signature="e#10097#10206#0" />
+            <element signature="e#10272#10387#0" />
+            <element signature="e#8678#8793#0" />
+            <element signature="e#8857#9059#0" />
+            <element signature="e#9119#9321#0" />
+            <element signature="e#12291#13947#0" />
+            <element signature="e#15868#19940#0" />
+            <element signature="e#17668#18279#0" />
+            <element signature="e#19565#20177#0" />
+            <element signature="e#20916#21422#0" />
+            <element signature="e#20029#22019#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/poker_chess_all_code_working.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygame_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poker_chess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="638" column="86" selection-start-line="638" selection-start-column="86" selection-end-line="638" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#153#2666#0" />
+            <element signature="e#2969#3399#0" />
+            <element signature="e#3686#3913#0" />
+            <element signature="e#4111#4459#0" />
+            <element signature="e#4702#4997#0" />
+            <element signature="e#5205#6204#0" />
+            <element signature="e#6253#7190#0" />
+            <element signature="e#7832#8087#0" />
+            <element signature="e#7455#11939#0" />
+            <element signature="e#8426#8955#0" />
+            <element signature="e#7450#7595#0" />
+            <element signature="e#9075#9396#0" />
+            <element signature="e#9450#10691#0" />
+            <element signature="e#7825#8083#0" />
+            <element signature="e#8143#8260#0" />
+            <element signature="e#10097#10206#0" />
+            <element signature="e#10272#10387#0" />
+            <element signature="e#8678#8793#0" />
+            <element signature="e#8857#9059#0" />
+            <element signature="e#9119#9321#0" />
+            <element signature="e#12291#13947#0" />
+            <element signature="e#15868#19940#0" />
+            <element signature="e#17668#18279#0" />
+            <element signature="e#19565#20177#0" />
+            <element signature="e#20916#21422#0" />
+            <element signature="e#20029#22019#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

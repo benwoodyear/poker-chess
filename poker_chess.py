@@ -407,7 +407,7 @@ def possible_hand_combinator(all_cards):
     different possible combinations and eliminates duplicate hands and any illegitimate hands.
     """
     all_card_products = [p for p in itertools.product(*all_cards)]
-    # This checks that two of the same card haven't been included in the hand
+    # This ensures that two of the same card haven't been included in the hand
     duplicate_cards_removed = [list(set(i)) for i in all_card_products]
     # This next step removes hands with just a different order of cards
     possible_hands = [list(i) for i in set(frozenset(i) for i in duplicate_cards_removed)]
@@ -589,15 +589,18 @@ def move_generator(chess_board, piece_matrix, piece_rank_white, piece_rank_black
 
 
 def game_function():
+    """
+    This function just pulls together all the previous classes and functions to run the game.
+    """
 
-    intro = input('If you like a quick introduction to poker chess enter y: ')
+    intro = input('If you would like a quick introduction to poker chess enter y: ')
     if intro == 'Y' or intro == 'y':
         print('''
               Welcome to poker chess! This game combines elements of both poker and chess to create an entirely new
               (and improved) experience. You can win by either a traditional checkmate victory or by being a set number
               of poker hands ahead.
               
-              It works by dealing the cards out in the shape of a chess board with the central rectangle of eight 
+              It works by dealing the cards out in the shape of a chess board with the central rectangle of twelve 
               squares missing. Hands are made up of the cards under your best four pieces and one pawn. So your initial 
               hand will be made from the cards under your king, queen, two rooks and one pawn. This changes during the 
               game as your pieces are taken.
@@ -609,12 +612,14 @@ def game_function():
               often correspond to a poor hand, due to the central squares being blank.
               
               You can choose between a random or a symmetrical deal, symmetrical is suggested for a more balanced game,
-              as this way players start on even hands. Moves are entered using the chess coordinate system.
+              as this way players start on even hands. Moves are entered using the chess coordinate system. The default
+              hand score difference to win is 5, although this can be changed as you see fit.
               
               Any questions or bugs please contact benwoodyear@gmail.com.
                             
               Enjoy!
               ''')
+        print('\n')
     else:
         pass
 
@@ -625,18 +630,30 @@ def game_function():
     white_pieces = [['K'], ['Q'], ['R', 'R'], ['B', 'B'], ['N', 'N'], ['P'] * 8]
     black_pieces = [['k'], ['q'], ['r', 'r'], ['b', 'b'], ['n', 'n'], ['p'] * 8]
 
+    # Call the choose_deal() function to set the deal type, then enter this into the Deal class
     deal_type = choose_deal()
     new_deal = Deal(deal_type).deal_cards()
 
+    # Create the board using the inbuilt python-chess option, then use make_piece_tracker() to create the matrix
     board = chess.Board()
     piece_matrix = make_piece_tracker()
 
     move_counter = 0
 
-    victory_difference = input('''What score difference would you like to set to win at? (5 is recommended to start 
-                                with for a fairly balanced game):  ''')
+    victory_difference = 5
 
-    while board.is_checkmate() is False and abs(white_hands_won - black_hands_won) < 8:
+    # Allow the player to change the win limit between the hand scores
+    change_hand_win_difference = input('Would you like the hand score win difference from 5? Enter y to alter. ')
+    if change_hand_win_difference == 'y' or change_hand_win_difference == 'Y':
+        victory_difference_check = False
+        while victory_difference_check is False:
+            victory_difference = input('''What poker score difference would you like to set as the victory limit?: ''')
+            victory_difference_check = victory_difference.isdigit()
+    else:
+        pass
+
+    # Keep looping while there is no checkmate and the hand score difference is less than the win cap
+    while board.is_checkmate() is False and abs(white_hands_won - black_hands_won) < victory_difference:
         print('\n')
 
         x, y = board_to_display(piece_matrix), nice_card_layout(new_deal)
@@ -654,6 +671,7 @@ def game_function():
             print('White to move')
         move_generator(board, piece_matrix, white_pieces, black_pieces)
 
+        # Check if the move counter is even, as this means black has just moved, then compare best hands if it is
         if move_counter % 2 == 0:
             hand_outcome = compare_best_hands(white_pieces, black_pieces, piece_matrix, new_deal)
 
@@ -667,11 +685,14 @@ def game_function():
             print('White has ' + str(white_hands_won) + ' hands')
             print('Black has ' + str(black_hands_won) + ' hands')
 
+    # Check which kind of victory has been achieved
     if board.is_checkmate() is False:
         if white_hands_won > black_hands_won:
             print('White wins a poker victory!')
         elif white_hands_won < black_hands_won:
             print('Black wins a poker victory!')
+    else:
+        print('Win by checkmate!')
 
 
 game_function()

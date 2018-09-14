@@ -531,7 +531,8 @@ def board_to_display(piece_matrix):
                 piece_number = piece_to_number[piece.upper()]
                 row += chess.Piece(piece_number, colour).unicode_symbol() + ' '
             else:
-                row += '\u2022' + ' '
+
+                row += '\u2015 '
         board.append(row)
     return board
 
@@ -544,16 +545,26 @@ def move_generator(chess_board, piece_matrix, piece_rank_white, piece_rank_black
     correct_move = False
     while correct_move is False:
         '''
-        TODO, make sure only coordinates can be entered, as numbers currently lead to crashes.
+        Make sure that the move entered is correct and doesn't lead to crashes.
         '''
         start_coord, end_coord = '  ', '  '
 
         # Check the input is in the right form - eg c2, c4
         while start_coord[0] not in 'abcdefgh' or start_coord[1] not in '12345678':
             start_coord = input('Enter where you want to move from: ')
+            if len(start_coord) != 2:
+                start_coord = '  '
+            else:
+                pass
 
         while end_coord[0] not in 'abcdefgh' or end_coord[1] not in '12345678':
             end_coord = input('Enter where you want to move to: ')
+            if len(end_coord) < 2 or len(end_coord) > 3:
+                end_coord = '  '
+            elif len(end_coord) == 3 and end_coord[2] not in 'qrbn':
+                end_coord = '  '
+            else:
+                pass
 
         if chess.Move.from_uci(start_coord + end_coord) in chess_board.legal_moves:
 

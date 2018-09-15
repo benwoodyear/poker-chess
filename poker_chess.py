@@ -176,10 +176,10 @@ def find_hand_selecting_pieces(piece_list):
 
 def hand_locations(board_matrix, pieces):
     """
-    This function takes the numpy array where the locations of the pieces are logged and the locations of the pieces
-    which will be considered to make the poker hand. It then searches the matrix for for pieces matching the names
-    and returns the coordinates of that piece. These coordinates are stored as a tuple so they can be input
-    into the card matrix to find the card at that location.
+    This function takes the numpy array where the locations of the pieces are tracked and the list of the pieces
+    which that player currently owns. It then searches the matrix for for pieces which will make the hand using the
+    function find_hand_selecting_pieces(). The matrix is then searched for these pieces and the coordinate is saved.
+    These coordinates are stored as a tuple so they can be input into the card matrix to find the card at that location.
     """
     hand = find_hand_selecting_pieces(pieces)
     all_hand_locations = []
@@ -416,9 +416,9 @@ def possible_hand_combinator(all_cards):
 
 def compare_best_hands(white_pieces, black_pieces, piece_matrix, card_matrix):
     """
-    This function first uses the hand_locations() function to find where the relevant cards are located. Then this is
+    This function first uses the hand_locations() function to find where the relevant pieces are located. Then this is
     fed into find_cards() which returns the cards at those locations. This in turn is passed to
-    possible_hand_combinator() white works out which combinations of these cards form valid and unique hands.
+    possible_hand_combinator() which works out which combinations of these cards form valid and unique hands.
 
     This list of possible hands is fed via a loop into the PokerScorer class, then hand_ranker() gives each
     hand a 'score' and puts the card values in order of importance, allowing hands to be compared and sorted.
@@ -440,7 +440,7 @@ def compare_best_hands(white_pieces, black_pieces, piece_matrix, card_matrix):
     for x in all_white_hands:
         white_hand_list.append(PokerScorer(x).hand_ranker())
     white_hand_matrix = np.array(white_hand_list, dtype='<i4')
-    # Use lexsort() to sort the the matrix from the 6th to the 1st column
+    # Use np.lexsort() to sort the the matrix from the 6th to the 1st column
     best_white_hand_matrix = white_hand_matrix[np.lexsort((white_hand_matrix[:, 5], white_hand_matrix[:, 4],
                                                            white_hand_matrix[:, 3], white_hand_matrix[:, 2],
                                                            white_hand_matrix[:, 1], white_hand_matrix[:, 0]))][:: -1]
@@ -450,7 +450,7 @@ def compare_best_hands(white_pieces, black_pieces, piece_matrix, card_matrix):
     for x in all_black_hands:
         black_hand_list.append(PokerScorer(x).hand_ranker())
     black_hand_matrix = np.array(black_hand_list, dtype='<i4')
-    # Use lexsort() to sort the the matrix from the 6th to the 1st column
+    # Use np.lexsort() to sort the the matrix from the 6th to the 1st column
     best_black_hand_matrix = black_hand_matrix[np.lexsort((black_hand_matrix[:, 5], black_hand_matrix[:, 4],
                                                            black_hand_matrix[:, 3], black_hand_matrix[:, 2],
                                                            black_hand_matrix[:, 1], black_hand_matrix[:, 0]))][:: -1]
@@ -481,14 +481,14 @@ def compare_best_hands(white_pieces, black_pieces, piece_matrix, card_matrix):
     score_to_hand_name = {1: 'High Card', 2: 'One Pair', 3: 'Two Pairs', 4: 'Three of a Kind', 5: 'A Straight',
                           6: 'A Flush', 7: 'Full House', 8: 'Four of a Kind', 9: 'Straight Flush!'}
 
-    for i in range(len(best_white_hand)):
+    for i in range(6):
         if best_white_hand[i] > best_black_hand[i]:
             print('White wins with: ' + score_to_hand_name[best_white_hand[0]])
             return 1
         elif best_white_hand[i] < best_black_hand[i]:
             print('Black wins with: ' + score_to_hand_name[best_black_hand[0]])
             return 2
-        elif i == len(best_white_hand) - 1 and best_white_hand[i] == best_black_hand[i]:
+        elif i == 5 and best_white_hand[i] == best_black_hand[i]:
             print('Draw - the hands are tied!')
         else:
             pass
@@ -496,7 +496,7 @@ def compare_best_hands(white_pieces, black_pieces, piece_matrix, card_matrix):
 
 def nice_card_layout(card_matrix):
     """
-    Just swaps the suit letter for a unicode symbol and then prints the card matrix in a nice grid.
+    Just swaps the suit letter for a unicode symbol and allows the card matrix to be printed in a nice grid.
     """
     # To swap the letter representation of the suit to a pretty unicode symbol
     card_symbols = {'H': '\u2661', 'D': '\u2662', 'S': '\u2664', 'C': '\u2667'}
@@ -531,10 +531,37 @@ def board_to_display(piece_matrix):
                 piece_number = piece_to_number[piece.upper()]
                 row += chess.Piece(piece_number, colour).unicode_symbol() + ' '
             else:
-
+                # This symbol is the same width as the unicode chess pieces when displayed in the terminal, keep this
+                # solution till a more versatile one can be implemented.
                 row += '\u1397 '
         board.append(row)
     return board
+
+
+def coord_entry():
+    """
+    Function to prompt the player to enter move coordinates and sure that the move entered is correct and doesn't lead
+    to crashes.
+    """
+    start_coord, end_coord = '  ', '  '
+
+    # Check the input is in the right form - eg c2, c4
+    while start_coord[0] not in 'abcdefgh' or start_coord[1] not in '12345678':
+        start_coord = input('Enter where you want to move from: ')
+        if len(start_coord) != 2:
+            start_coord = '  '
+        else:
+            pass
+    # Also have to consider lengths of 3 due to promotions - eg. c8q to promote to a queen on c8
+    while end_coord[0] not in 'abcdefgh' or end_coord[1] not in '12345678':
+        end_coord = input('Enter where you want to move to: ')
+        if len(end_coord) < 2 or len(end_coord) > 3:
+            end_coord = '  '
+        elif len(end_coord) == 3 and end_coord[2] not in 'qrbn':
+            end_coord = '  '
+        else:
+            pass
+    return start_coord, end_coord
 
 
 def move_generator(chess_board, piece_matrix, piece_rank_white, piece_rank_black):
@@ -544,28 +571,12 @@ def move_generator(chess_board, piece_matrix, piece_rank_white, piece_rank_black
     """
     correct_move = False
     while correct_move is False:
-        '''
-        Make sure that the move entered is correct and doesn't lead to crashes.
-        '''
-        start_coord, end_coord = '  ', '  '
 
-        # Check the input is in the right form - eg c2, c4
-        while start_coord[0] not in 'abcdefgh' or start_coord[1] not in '12345678':
-            start_coord = input('Enter where you want to move from: ')
-            if len(start_coord) != 2:
-                start_coord = '  '
-            else:
-                pass
+        both_coordinates = coord_entry()
+        start_coord = both_coordinates[0]
+        end_coord = both_coordinates[1]
 
-        while end_coord[0] not in 'abcdefgh' or end_coord[1] not in '12345678':
-            end_coord = input('Enter where you want to move to: ')
-            if len(end_coord) < 2 or len(end_coord) > 3:
-                end_coord = '  '
-            elif len(end_coord) == 3 and end_coord[2] not in 'qrbn':
-                end_coord = '  '
-            else:
-                pass
-
+        # Use the inbuilt python-chess functions to check the move is legal and execute it if it is
         if chess.Move.from_uci(start_coord + end_coord) in chess_board.legal_moves:
 
             chess_board.push(chess.Move.from_uci(start_coord + end_coord))
@@ -599,43 +610,64 @@ def move_generator(chess_board, piece_matrix, piece_rank_white, piece_rank_black
             print('This is not a legal move.')
 
 
+def introduction():
+    intro = input('If you would like a quick introduction to poker chess enter y: ')
+    if intro == 'Y' or intro == 'y':
+        print('''
+        Welcome to poker chess! This game combines elements of both poker and chess to create an entirely new 
+        (and improved) experience. You can win by either a traditional checkmate victory or by being a set number 
+        of poker hands ahead.
+
+        It works by dealing the cards out in the shape of a chess board with the central rectangle of twelve 
+        squares missing. Hands are made up of the cards under your best four pieces and one pawn. So your initial 
+        hand will be made from the cards under your king, queen, two rooks and one pawn. This changes during the 
+        game as your pieces are taken.
+
+        After black's move the best hand for each player is calculated. The player with the strongest hand adds a 
+        point to their score. 
+
+        You'll have to balance a chess advantage with holding onto a better hand, as a strong chess position will 
+        often correspond to a poor hand, due to the central squares being blank.
+
+        You can choose between a random or a symmetrical deal, symmetrical is suggested for a more balanced game, 
+        as this way players start on even hands. Moves are entered using the chess coordinate system for example e2, 
+        followed by e4 to move your pawn to e4. For promotions append the lowercase letter for the piece you wish to 
+        promote your pawn to so to promote to a queen on d8 your end coordinate entered would be d8q. 
+        
+        The default hand score difference to win is 5, although this can be changed as you see fit at the beginning of
+        the game. Bear in mind that the game will end in a draw with stalemate of if neither player has sufficient 
+        mating material. However other metrics for a draw are not observed.
+
+        Any questions or bugs please contact benwoodyear@gmail.com.
+
+        Enjoy!
+        ''')
+        print('\n')
+    else:
+        pass
+
+
+def change_win_limit():
+    victory_difference = 5
+
+    # Allow the player to change the win limit between the hand scores
+    change_hand_win_difference = input('Would you like the hand score win difference from 5? Enter y to alter. ')
+    if change_hand_win_difference == 'y' or change_hand_win_difference == 'Y':
+        victory_difference_check = False
+        while victory_difference_check is False:
+            victory_difference = input('''What poker score difference would you like to set as the victory limit?: ''')
+            victory_difference_check = victory_difference.isdigit()
+    else:
+        pass
+    return victory_difference
+
+
 def game_function():
     """
     This function just pulls together all the previous classes and functions to run the game.
     """
 
-    intro = input('If you would like a quick introduction to poker chess enter y: ')
-    if intro == 'Y' or intro == 'y':
-        print('''
-              Welcome to poker chess! This game combines elements of both poker and chess to create an entirely new
-              (and improved) experience. You can win by either a traditional checkmate victory or by being a set number
-              of poker hands ahead.
-              
-              It works by dealing the cards out in the shape of a chess board with the central rectangle of twelve 
-              squares missing. Hands are made up of the cards under your best four pieces and one pawn. So your initial 
-              hand will be made from the cards under your king, queen, two rooks and one pawn. This changes during the 
-              game as your pieces are taken.
-              
-              After black's move the best hand for each player is calculated. The player with the strongest hand adds a 
-              point to their score. 
-              
-              You'll have to balance a chess advantage with holding onto a better hand, as a strong chess position will
-              often correspond to a poor hand, due to the central squares being blank.
-              
-              You can choose between a random or a symmetrical deal, symmetrical is suggested for a more balanced game,
-              as this way players start on even hands. Moves are entered using the chess coordinate system. The default
-              hand score difference to win is 5, although this can be changed as you see fit.
-              
-              Any questions or bugs please contact benwoodyear@gmail.com.
-                            
-              Enjoy!
-              ''')
-        print('\n')
-    else:
-        pass
-
-    white_hands_won = 0
-    black_hands_won = 0
+    introduction()
 
     # All the pieces of each colour, ranked in order to work out the poker hand
     white_pieces = [['K'], ['Q'], ['R', 'R'], ['B', 'B'], ['N', 'N'], ['P'] * 8]
@@ -651,22 +683,19 @@ def game_function():
 
     move_counter = 0
 
-    victory_difference = 5
+    victory_difference = change_win_limit()
 
-    # Allow the player to change the win limit between the hand scores
-    change_hand_win_difference = input('Would you like the hand score win difference from 5? Enter y to alter. ')
-    if change_hand_win_difference == 'y' or change_hand_win_difference == 'Y':
-        victory_difference_check = False
-        while victory_difference_check is False:
-            victory_difference = input('''What poker score difference would you like to set as the victory limit?: ''')
-            victory_difference_check = victory_difference.isdigit()
-    else:
-        pass
+    white_hands_won = 0
+    black_hands_won = 0
+    hand_difference = abs(white_hands_won - black_hands_won)
 
-    # Keep looping while there is no checkmate and the hand score difference is less than the win cap
-    while board.is_checkmate() is False and abs(white_hands_won - black_hands_won) < victory_difference:
+    # Keep looping while there is no checkmate, hand score difference is less than the win cap or not a draw
+    while board.is_checkmate() is False and hand_difference < victory_difference and board.is_stalemate() is False\
+            and board.is_insufficient_material() is False:
         print('\n')
 
+        # Print both the chess board and piece layout row by row, with coordinates to the side and below to help new
+        # players. This is not always consistent between displays so try and think of a better way if possible.
         x, y = board_to_display(piece_matrix), nice_card_layout(new_deal)
         for i in range(8):
             print(str(8 - i) + '| ' + x[i] + '  ' + y[i])
@@ -697,13 +726,19 @@ def game_function():
             print('Black has ' + str(black_hands_won))
 
     # Check which kind of victory has been achieved
-    if board.is_checkmate() is False:
+    if hand_difference == victory_difference:
         if white_hands_won > black_hands_won:
             print('White wins a poker victory!')
         elif white_hands_won < black_hands_won:
             print('Black wins a poker victory!')
-    else:
+    elif board.is_checkmate() is True:
         print('Win by checkmate!')
+    elif board.is_stalemate() is True:
+        print('Draw by stalemate.')
+    elif board.is_insufficient_material() is True:
+        print('Draw due to insufficient mating material.')
+    else:
+        print('Not sure what happened, please report!')
 
 
 game_function()

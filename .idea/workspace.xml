@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="" />
+    <list default="true" id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/poker_chess.py" beforeDir="false" afterPath="$PROJECT_DIR$/poker_chess.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,20 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pygame_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pygame_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="poker_chess.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="poker_chess.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/poker_chess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="638" column="75" selection-start-line="638" selection-start-column="75" selection-end-line="638" selection-end-column="75" />
+            <state relative-caret-position="486">
+              <caret line="222" selection-start-line="222" selection-end-line="222" />
               <folding>
                 <element signature="e#153#2666#0" />
                 <element signature="e#153#169#1" />
@@ -68,7 +61,6 @@
                 <element signature="e#5745#5827#0" />
                 <element signature="e#6253#7190#0" />
                 <element signature="e#6778#7160#0" />
-                <element signature="e#7439#8400#0" />
                 <element signature="e#7526#7962#1" />
                 <element signature="e#7950#8105#0" />
                 <element signature="e#7986#8105#0" />
@@ -120,15 +112,24 @@
                 <element signature="e#19710#19758#0" />
                 <element signature="e#20916#21422#0" />
                 <element signature="e#20910#20966#1" />
-                <element signature="e#21779#22646#0" />
                 <element signature="e#22736#24649#0" />
                 <element signature="e#23029#24649#0" />
                 <element signature="e#19644#19800#0" />
                 <element signature="e#19843#19999#0" />
+                <element signature="e#24497#26256#0" />
                 <element signature="e#26275#26894#0" />
                 <element signature="e#26921#29940#0" />
                 <element signature="e#23950#23980#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poker_chess_online_version.py" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/poker_chess_online_version.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="582">
+              <caret line="222" selection-start-line="222" selection-end-line="222" />
             </state>
           </provider>
         </entry>
@@ -151,6 +152,7 @@
         <option value="$PROJECT_DIR$/card_deal.py" />
         <option value="$PROJECT_DIR$/dealing_cards.py" />
         <option value="$PROJECT_DIR$/pygame_tests.py" />
+        <option value="$USER_HOME$/Desktop/poker_chess_online_version.py" />
         <option value="$PROJECT_DIR$/poker_chess.py" />
       </list>
     </option>
@@ -282,7 +284,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16953126" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.328877" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" x="0" y="50" width="1280" height="699" id="Run" order="2" sideWeight="0.49921876" type="WINDOWED" weight="0.934492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -366,7 +368,6 @@
             <element signature="e#5745#5827#0" />
             <element signature="e#6253#7190#0" />
             <element signature="e#6778#7160#0" />
-            <element signature="e#7439#8400#0" />
             <element signature="e#7526#7962#1" />
             <element signature="e#7950#8105#0" />
             <element signature="e#7986#8105#0" />
@@ -418,11 +419,11 @@
             <element signature="e#19710#19758#0" />
             <element signature="e#20916#21422#0" />
             <element signature="e#20910#20966#1" />
-            <element signature="e#21779#22646#0" />
             <element signature="e#22736#24649#0" />
             <element signature="e#23029#24649#0" />
             <element signature="e#19644#19800#0" />
             <element signature="e#19843#19999#0" />
+            <element signature="e#24497#26256#0" />
             <element signature="e#26275#26894#0" />
             <element signature="e#26921#29940#0" />
             <element signature="e#23950#23980#1" />
@@ -484,7 +485,6 @@
             <element signature="e#5745#5827#0" />
             <element signature="e#6253#7190#0" />
             <element signature="e#6778#7160#0" />
-            <element signature="e#7439#8400#0" />
             <element signature="e#7526#7962#1" />
             <element signature="e#7950#8105#0" />
             <element signature="e#7986#8105#0" />
@@ -536,11 +536,11 @@
             <element signature="e#19710#19758#0" />
             <element signature="e#20916#21422#0" />
             <element signature="e#20910#20966#1" />
-            <element signature="e#21779#22646#0" />
             <element signature="e#22736#24649#0" />
             <element signature="e#23029#24649#0" />
             <element signature="e#19644#19800#0" />
             <element signature="e#19843#19999#0" />
+            <element signature="e#24497#26256#0" />
             <element signature="e#26275#26894#0" />
             <element signature="e#26921#29940#0" />
             <element signature="e#23950#23980#1" />
@@ -602,7 +602,6 @@
             <element signature="e#5745#5827#0" />
             <element signature="e#6253#7190#0" />
             <element signature="e#6778#7160#0" />
-            <element signature="e#7439#8400#0" />
             <element signature="e#7526#7962#1" />
             <element signature="e#7950#8105#0" />
             <element signature="e#7986#8105#0" />
@@ -654,11 +653,11 @@
             <element signature="e#19710#19758#0" />
             <element signature="e#20916#21422#0" />
             <element signature="e#20910#20966#1" />
-            <element signature="e#21779#22646#0" />
             <element signature="e#22736#24649#0" />
             <element signature="e#23029#24649#0" />
             <element signature="e#19644#19800#0" />
             <element signature="e#19843#19999#0" />
+            <element signature="e#24497#26256#0" />
             <element signature="e#26275#26894#0" />
             <element signature="e#26921#29940#0" />
             <element signature="e#23950#23980#1" />
@@ -678,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_chess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="638" column="75" selection-start-line="638" selection-start-column="75" selection-end-line="638" selection-end-column="75" />
+        <state relative-caret-position="486">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
           <folding>
             <element signature="e#153#2666#0" />
             <element signature="e#153#169#1" />
@@ -723,7 +722,6 @@
             <element signature="e#5745#5827#0" />
             <element signature="e#6253#7190#0" />
             <element signature="e#6778#7160#0" />
-            <element signature="e#7439#8400#0" />
             <element signature="e#7526#7962#1" />
             <element signature="e#7950#8105#0" />
             <element signature="e#7986#8105#0" />
@@ -775,15 +773,22 @@
             <element signature="e#19710#19758#0" />
             <element signature="e#20916#21422#0" />
             <element signature="e#20910#20966#1" />
-            <element signature="e#21779#22646#0" />
             <element signature="e#22736#24649#0" />
             <element signature="e#23029#24649#0" />
             <element signature="e#19644#19800#0" />
             <element signature="e#19843#19999#0" />
+            <element signature="e#24497#26256#0" />
             <element signature="e#26275#26894#0" />
             <element signature="e#26921#29940#0" />
             <element signature="e#23950#23980#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/poker_chess_online_version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>

@@ -220,7 +220,6 @@ def find_cards(piece_locations, card_deal):
         card_selection[i] = [x for x in cards_at_locations[i] if x != 0]
     # Making sure there are no empty lists is the card list, as this causes itertools.product to return no combinations
     final_card_selection = [y for y in card_selection if y != []]
-    print(final_card_selection)
     return final_card_selection
 
 
@@ -540,7 +539,7 @@ def board_to_display(piece_matrix):
 
 def coord_entry():
     """
-    Function to prompt the player to enter move coordinates and sure that the move entered is correct and doesn't lead
+    Function to prompt the player to enter move coordinates and ensure that the move entered is correct and doesn't lead
     to crashes.
     """
     start_coord, end_coord = '  ', '  '

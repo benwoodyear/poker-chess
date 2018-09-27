@@ -514,7 +514,7 @@ def nice_card_layout(card_matrix):
     return board
 
 
-def board_to_display(piece_matrix):
+def board_to_display(piece_matrix, empty_square_symbol):
     """
     Creates a board with the unicode symbols for the pieces and dots for empty squares.
     """
@@ -532,7 +532,7 @@ def board_to_display(piece_matrix):
             else:
                 # This symbol is the same width as the unicode chess pieces when displayed in the terminal, keep this
                 # solution till a more versatile one can be implemented.
-                row += '\u1397 '
+                row += empty_square_symbol + ' '
         board.append(row)
     return board
 
@@ -634,8 +634,11 @@ def introduction():
         promote your pawn to so to promote to a queen on d8 your end coordinate entered would be d8q. 
         
         The default hand score difference to win is 5, although this can be changed as you see fit at the beginning of
-        the game. Bear in mind that the game will end in a draw with stalemate of if neither player has sufficient 
+        the game. Bear in mind that the game will end in a draw with stalemate or if neither player has sufficient 
         mating material. However other metrics for a draw are not observed.
+        
+        Due to the variation in how chess symbols are displayed, you may have to change the lenght of the empty square
+        spacers. You'll be prompted to do this twice at the beginning.
 
         Any questions or bugs please contact benwoodyear@gmail.com.
 
@@ -693,9 +696,20 @@ def game_function():
             and board.is_insufficient_material() is False:
         print('\n')
 
+        if move_counter < 2:
+            board_spacer = input('Would you like a long or short empty-square-spacer for the chess board? Enter l/s: ')
+            print('\n')
+        else:
+            pass
+
+        if board_spacer == 'l':
+            board_delimiter = '\u1397'
+        else:
+            board_delimiter = '-'
+
         # Print both the chess board and piece layout row by row, with coordinates to the side and below to help new
         # players. This is not always consistent between displays so try and think of a better way if possible.
-        x, y = board_to_display(piece_matrix), nice_card_layout(new_deal)
+        x, y = board_to_display(piece_matrix, board_delimiter), nice_card_layout(new_deal)
         for i in range(8):
             print(str(8 - i) + '| ' + x[i] + '  ' + y[i])
         print('  -----------------')

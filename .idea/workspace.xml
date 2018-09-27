@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poker_chess.py" beforeDir="false" afterPath="$PROJECT_DIR$/poker_chess.py" afterDir="false" />
-    </list>
+    <list default="true" id="bfc94194-759c-4e55-a03d-21ce3abd4e14" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +14,8 @@
       <file leaf-file-name="poker_chess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poker_chess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="640" column="70" selection-start-line="640" selection-start-column="70" selection-end-line="640" selection-end-column="70" />
+            <state relative-caret-position="10590">
+              <caret line="714" column="36" lean-forward="true" selection-start-line="714" selection-start-column="36" selection-end-line="714" selection-end-column="36" />
               <folding>
                 <element signature="e#506#532#0" />
                 <element signature="e#829#886#0" />
@@ -172,11 +169,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16953126" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.328877" />
-      <window_info active="true" anchor="bottom" x="0" y="50" width="1280" height="699" id="Run" order="2" sideWeight="0.49921876" type="WINDOWED" visible="true" weight="0.934492" />
+      <window_info anchor="bottom" x="0" y="50" width="1280" height="699" id="Run" order="2" sideWeight="0.49921876" type="WINDOWED" weight="0.934492" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -263,8 +261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_chess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="640" column="70" selection-start-line="640" selection-start-column="70" selection-end-line="640" selection-end-column="70" />
+        <state relative-caret-position="10590">
+          <caret line="714" column="36" lean-forward="true" selection-start-line="714" selection-start-column="36" selection-end-line="714" selection-end-column="36" />
           <folding>
             <element signature="e#506#532#0" />
             <element signature="e#829#886#0" />
